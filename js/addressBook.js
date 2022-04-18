@@ -1,6 +1,6 @@
 // addressbook pojo class
 class Contact{
-    
+     
         get id(){
             return this._id;
         }
@@ -42,19 +42,8 @@ class Contact{
     
         set address(address)
         {
-            let words = address.split(" ");
-            if(words.length>1){
-                let addressRegex = RegExp('^[A-Za-z,/.0-9]{3,}$');
-                for(const word of words){
-                    if(!addressRegex.test(word))
-                    throw 'Address Invalid';
-                }
-                this._address = address;
-            }
-            else{
-                throw 'Address Invalid';
-            }
             
+            this._address=address;
         }
     
         get city(){
@@ -113,8 +102,7 @@ class Contact{
             throw 'Phone Number Invalid'
         }
     
-       
-    
+        
         toString()
         {
             return "Id = "+this.id+", FirstName = "+this.firstName+", LastName = "+this.lastName+", Address = "+this.address+
