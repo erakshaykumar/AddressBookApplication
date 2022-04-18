@@ -54,7 +54,7 @@ class Contact{
             else{
                 throw 'Address Invalid';
             }
-            // this._address=address;
+            
         }
     
         get city(){
@@ -113,24 +113,12 @@ class Contact{
             throw 'Phone Number Invalid'
         }
     
-        get email()
-        {
-            return this._email;
-        }
-    
-        set email(email)
-        {
-            let emailRegex = RegExp('/[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm');
-            if(emailRegex.test(email))
-            this._email = email;
-            else
-            throw 'Email Incorrect';
-        }
+       
     
         toString()
         {
             return "Id = "+this.id+", FirstName = "+this.firstName+", LastName = "+this.lastName+", Address = "+this.address+
-                    ", City = "+this.city+", State = "+this.state+", Zip = "+this.zip+", Phone = "+this.phone+", Email = "+this.email;
+                    ", City = "+this.city+", State = "+this.state+", Zip = "+this.zip+", Phone = "+this.phone;
         }
     
     }
