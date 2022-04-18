@@ -1,6 +1,6 @@
-// UC4-addressbook pojo class
+// addressbook pojo class
 class Contact{
-    // 
+    
         get id(){
             return this._id;
         }
